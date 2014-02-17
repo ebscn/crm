@@ -1,0 +1,310 @@
+---
+zh-CN:
+  ransack:
+    search: "查找"
+    predicate: "谓词"
+    and: "与"
+    or: "或"
+    any: "任意"
+    all: "全部"
+    combinator: "组合"
+    attribute: "参数"
+    value: "值"
+    condition: "条件"
+    sort: "排序"
+    asc: "升序"
+    desc: "降序"
+    predicates:
+      eq: "等于"
+      eq_any: "等于任意"
+      eq_all: "等于全部"
+      not_eq: "不等于"
+      not_eq_any: "不等于任意"
+      not_eq_all: "不等于全部"
+      matches: "符合"
+      matches_any: "符合任意"
+      matches_all: "符合全部"
+      does_not_match: "不符合"
+      does_not_match_any: "不符合任意"
+      does_not_match_all: "不符合全部"
+      lt: "小于"
+      lt_any: "小于任意"
+      lt_all: "小于全部"
+      lteq: "小于等于"
+      lteq_any: "小于等于任意"
+      lteq_all: "小于等于全部"
+      gt: "大于"
+      gt_any: "大于任意"
+      gt_all: "大于全部"
+      gteq: "大于等于"
+      gteq_any: "大于等于任意"
+      gteq_all: "大于等于全部"
+      in: "在其中"
+      in_any: "在其中任意"
+      in_all: "在其中全部"
+      not_in: "不在其中"
+      not_in_any: "不在其中任意"
+      not_in_all: "不在其中全部"
+      cont: "包含"
+      cont_any: "包含任意"
+      cont_all: "包含全部"
+      not_cont: "不含"
+      not_cont_any: "不含任意"
+      not_cont_all: "不含全部"
+      start: "以 开始"
+      start_any: "以任意开始"
+      start_all: "以全部开始"
+      not_start: "不以 开始"
+      not_start_any: "不以任意开始"
+      not_start_all: "不以全部开始"
+      end: "以 结束"
+      end_any: "以任意结束"
+      end_all: "以全部结束"
+      not_end: "不以 结束"
+      not_end_any: "不以任意结束"
+      not_end_all: "不以全部结束"
+      'true': "为真"
+      'false': "为假"
+      present: "存在"
+      blank: "是空"
+      'null': "是null"
+      not_null: "不是null"
+  date:
+    formats:
+      default: ! '%Y-%m-%d'
+      short: ! '%b%d日'
+      long: ! '%Y年%b%d日'
+    day_names:
+    - 星期日
+    - 星期一
+    - 星期二
+    - 星期三
+    - 星期四
+    - 星期五
+    - 星期六
+    abbr_day_names:
+    - 日
+    - 一
+    - 二
+    - 三
+    - 四
+    - 五
+    - 六
+    month_names:
+    - 
+    - 一月
+    - 二月
+    - 三月
+    - 四月
+    - 五月
+    - 六月
+    - 七月
+    - 八月
+    - 九月
+    - 十月
+    - 十一月
+    - 十二月
+    abbr_month_names:
+    - 
+    - 1月
+    - 2月
+    - 3月
+    - 4月
+    - 5月
+    - 6月
+    - 7月
+    - 8月
+    - 9月
+    - 10月
+    - 11月
+    - 12月
+    order:
+    - :year
+    - :month
+    - :day
+  time:
+    formats:
+      default: ! '%Y年%b%d日 %A %H:%M:%S %Z'
+      short: ! '%b%d日 %H:%M'
+      long: ! '%Y年%b%d日 %H:%M'
+    am: 上午
+    pm: 下午
+  datetime:
+    distance_in_words:
+      half_a_minute: 半分钟
+      less_than_x_seconds:
+        one: 不到一秒
+        other: 不到 %{count} 秒
+      x_seconds:
+        one: 一秒
+        other: ! '%{count} 秒'
+      less_than_x_minutes:
+        one: 不到一分钟
+        other: 不到 %{count} 分钟
+      x_minutes:
+        one: 一分钟
+        other: ! '%{count} 分钟'
+      about_x_hours:
+        one: 大约一小时
+        other: 大约 %{count} 小时
+      x_days:
+        one: 一天
+        other: ! '%{count} 天'
+      about_x_months:
+        one: 大约一个月
+        other: 大约 %{count} 个月
+      x_months:
+        one: 一个月
+        other: ! '%{count} 个月'
+      about_x_years:
+        one: 大约一年
+        other: 大约 %{count} 年
+      over_x_years:
+        one: 一年多
+        other: ! '%{count} 年多'
+      almost_x_years:
+        one: 接近一年
+        other: 接近 %{count} 年
+    prompts:
+      year: 年
+      month: 月
+      day: 日
+      hour: 时
+      minute: 分
+      second: 秒
+  number:
+    format:
+      separator: .
+      delimiter: ! ','
+      precision: 3
+      significant: false
+      strip_insignificant_zeros: false
+    currency:
+      format:
+        format: ! '%u %n'
+        unit: CN¥
+        separator: .
+        delimiter: ! ','
+        precision: 2
+        significant: false
+        strip_insignificant_zeros: false
+    percentage:
+      format:
+        delimiter: ''
+    precision:
+      format:
+        delimiter: ''
+    human:
+      format:
+        delimiter: ''
+        precision: 1
+        significant: false
+        strip_insignificant_zeros: false
+      storage_units:
+        format: ! '%n %u'
+        units:
+          byte:
+            one: Byte
+            other: Bytes
+          kb: KB
+          mb: MB
+          gb: GB
+          tb: TB
+      decimal_units:
+        format: ! '%n %u'
+        units:
+          atto: 渺
+          femto: 飞
+          pico: 漠
+          nano: 奈
+          micro: 微
+          mili: 毫
+          centi: 厘
+          deci: 分
+          unit: ''
+          ten:
+            one: 十
+            other: 十
+          hundred: 百
+          thousand: 千
+          million: 百万
+          billion: 十亿
+          trillion: 兆
+          quadrillion: 千兆
+  support:
+    array:
+      words_connector: ! ', '
+      two_words_connector: ! ' 和 '
+      last_word_connector: ! ', 和 '
+    select:
+      prompt: 请选择
+  activerecord:
+    errors:
+      template:
+        header:
+          one: 有 1 个错误发生导致「%{model}」无法被保存。
+          other: 有 %{count} 个错误发生导致「%{model}」无法被保存。
+        body: 如下字段出现错误：
+      full_messages:
+        format: ! '%{attribute} %{message}'
+      messages:
+        inclusion: 不包含于列表中
+        exclusion: 是保留关键字
+        invalid: 是无效的
+        confirmation: 与确认值不匹配
+        accepted: 必须是可被接受的
+        empty: 不能留空
+        blank: 不能为空字符
+        too_long: 过长（最长为 %{count} 个字符）
+        too_short: 过短（最短为 %{count} 个字符）
+        wrong_length: 长度非法（必须为 %{count} 个字符）
+        not_a_number: 不是数字
+        not_an_integer: 必须是整数
+        greater_than: 必须大于 %{count}
+        greater_than_or_equal_to: 必须大于或等于 %{count}
+        equal_to: 必须等于 %{count}
+        less_than: 必须小于 %{count}
+        less_than_or_equal_to: 必须小于或等于 %{count}
+        odd: 必须为单数
+        even: 必须为双数
+        taken: 已经被使用
+        record_invalid: ! '校验失败: %{errors}'
+  activemodel:
+    errors:
+      template:
+        header:
+          one: 有 1 个错误发生导致「%{model}」无法被保存。
+          other: 有 %{count} 个错误发生导致「%{model}」无法被保存。
+        body: 如下字段出现错误：
+  errors:
+    format: ! '%{attribute} %{message}'
+    messages:
+      inclusion: 不包含于列表中
+      exclusion: 是保留关键字
+      invalid: 是无效的
+      confirmation: 与确认值不匹配
+      accepted: 必须是可被接受的
+      empty: 不能留空
+      blank: 不能为空字符
+      too_long: 过长（最长为 %{count} 个字符）
+      too_short: 过短（最短为 %{count} 个字符）
+      wrong_length: 长度非法（必须为 %{count} 个字符）
+      not_a_number: 不是数字
+      not_an_integer: 必须是整数
+      greater_than: 必须大于 %{count}
+      greater_than_or_equal_to: 必须大于或等于 %{count}
+      equal_to: 必须等于 %{count}
+      less_than: 必须小于 %{count}
+      less_than_or_equal_to: 必须小于或等于 %{count}
+      odd: 必须为单数
+      even: 必须为双数
+  helpers:
+    select:
+      prompt: 请选择
+    submit:
+      create: 新增%{model}
+      update: 更新%{model}
+      submit: 储存%{model}
+  will_paginate:
+    previous_label: 前页
+    next_label: 后页

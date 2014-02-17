@@ -1,0 +1,28 @@
+- @global_lists = List.where(:user_id => nil)
+- @list = List.new
+.panel#lists
+  .caption #{t :global_lists}
+  %ul
+    - if @global_lists.none?
+      %div #{t :no_saved_lists}
+    - else
+      - @global_lists.sort.each_with_index do |list, i|
+        %li[list]{ :class => i < @global_lists.size - 1 ? "" : "last" }
+          %dt= link_to(truncate(list.name, :length => 25), h(list.url), :title => list.name)
+          %tt
+            = link_to(url_for(list), :method => :delete, :confirm => 'Are you sure?', :remote => true, :class => "list_icon delete_on_hover") do
+              %i.fa{:"data-controller" => list.controller, class: get_icon(list.controller)}
+
+  .show_lists_save_form{ hidden_if(!params[:q]) }
+    = link_to(t(:make_current_view_list), '#')
+
+  .save_list{ hidden }
+    = simple_form_for(@list, :html => one_submit_only, :remote => true) do |f|
+      = f.text_field :name, :size => 25
+      = image_tag("/assets/info_tiny.png", :title => t(:list_name_info), :class => "input_info")
+      = f.hidden_field :url
+      %input{:type => "hidden", :name => "is_global", :value => 1}
+      %div
+        = f.submit(t(:save), :id => "save_list", :style => "vertical-align: bottom;")
+        #{t :or}
+        = link_to(t(:cancel), '#', :class => "hide_lists_save_form")
